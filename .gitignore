@@ -1,7 +1,16 @@
 # =============================================================================
-# 1. Local Documentation (Untracked in Git, Readable by AI Agent)
+# 1. Local Documentation (Untracked in Git, EXCEPT /docs/hito-2 for GitHub)
 # =============================================================================
-docs/
+docs/*
+!docs/hito-2/
+
+# Ignore the Master Document (.md and exported .pdf) and Obsidian config inside /docs/hito-2
+# so GitHub ONLY tracks the required diagram source files (c4/, uml/, persistencia/) and ADRs (adr/)
+docs/hito-2/DOCUMENTO-MAESTRO-PARCIAL-2.md
+docs/hito-2/DOCUMENTO-MAESTRO-PARCIAL-2.pdf
+docs/hito-2/*.pdf
+.obsidian/
+**/.obsidian/
 
 # =============================================================================
 # 2. Backend (Spring Boot 3.x / Maven / Java)

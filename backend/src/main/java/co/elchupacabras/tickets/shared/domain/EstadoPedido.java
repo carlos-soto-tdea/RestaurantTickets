@@ -1,0 +1,15 @@
+package co.elchupacabras.tickets.shared.domain;
+
+public enum EstadoPedido {
+    PAGADO_REGISTRADO,
+    EN_PREPARACION,
+    LISTO_PARA_DESPACHO,
+    LISTO_PARA_RECOGER,
+    EN_RUTA_DOMICILIO,
+    ENTREGADO,
+    NO_ENTREGADO,
+    CANCELADO_REEMBOLSO_PENDIENTE,
+    REEMBOLSO_PENDIENTE,
+    REEMBOLSADO,
+    ENTREGADO_CON_AJUSTE
+}
