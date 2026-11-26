@@ -1,0 +1,87 @@
+# =============================================================================
+# 1. Local Documentation (Untracked in Git, Readable by AI Agent)
+# =============================================================================
+docs/
+
+# =============================================================================
+# 2. Backend (Spring Boot 3.x / Maven / Java)
+# =============================================================================
+backend/target/
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+.sts4-cache/
+
+# Keep Maven Wrapper JAR and scripts tracked
+!backend/.mvn/wrapper/maven-wrapper.jar
+!backend/mvnw
+!backend/mvnw.cmd
+
+# =============================================================================
+# 3. Frontend (React 18+ / Vite / TypeScript / Node)
+# =============================================================================
+frontend/node_modules/
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+dist/
+build/
+.npm/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+
+# =============================================================================
+# 4. Logs, Environment Variables & Secrets
+# =============================================================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+*.pem
+*.key
+
+# =============================================================================
+# 5. IDEs, Editors & OS Artifacts
+# =============================================================================
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# =============================================================================
+# 6. Agent Configuration (Keep Tracked)
+# =============================================================================
+!.gemini/
+!.agents/
+!GEMINI.md
+!AGENTS.md

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json.schemastore.org/partial-gemini-config.json",
+  "project": {
+    "name": "RestaurantTickets",
+    "businessName": "El Chupacabras",
+    "location": "Los Patios, Norte de Santander, Colombia",
+    "businessModel": "Strict self-service fast-food Mexican restaurant",
+    "architecture": {
+      "style": "Domain-Driven Design (DDD) / Hexagonal / Clean Architecture",
+      "backend": "Java 17+ / Spring Boot 3.x",
+      "frontend": "React 18+ / TypeScript / Tailwind CSS / React Query",
+      "database": "PostgreSQL 15+",
+      "specsPath": "docs"
+    },
+    "boundedContexts": [
+      "pedidos-y-pagos",
+      "inventario-operativo",
+      "preparacion-y-despacho",
+      "domicilios",
+      "catalogo-y-recetas",
+      "incidencias-y-devoluciones",
+      "caja-y-cierre",
+      "identidad-y-acceso"
+    ]
+  },
+  "agent": {
+    "primary": "Gemini",
+    "methodology": [
+      "Agent-Driven Development (ADD)",
+      "Test-Driven Development (TDD - Red-Green-Refactor)",
+      "Behavior-Driven Development (BDD - Gherkin)"
+    ],
+    "instructionLanguage": "en-US",
+    "domainUbiquitousLanguage": "es-CO",
+    "strictBoundaries": true,
+    "commitGranularity": {
+      "maxLinesAddedPerTask": 300,
+      "maxFilesChangedPerCommit": 6,
+      "singleResponsibilityPerCommit": true
+    }
+  },
+  "gitPolicy": {
+    "allowAiAuthoredCommits": false,
+    "allowAiCoAuthoredTrailers": false,
+    "allowedNonDestructiveOperations": [
+      "git status",
+      "git diff",
+      "git log",
+      "git branch",
+      "git checkout -b",
+      "git switch",
+      "git add",
+      "git restore --staged",
+      "git stash"
+    ],
+    "forbiddenOperations": [
+      "git commit",
+      "git commit --amend",
+      "git push",
+      "git push --force",
+      "git reset --hard",
+      "git clean -fd",
+      "git rebase",
+      "Adding Co-authored-by: Gemini or any AI attribution trailer"
+    ]
+  },
+  "permissions": {
+    "autoAllowlist": [
+      "read_all_files_and_docs",
+      "create_and_edit_source_code",
+      "create_and_edit_test_files",
+      "run_unit_and_integration_tests",
+      "run_build_and_linter_commands",
+      "generate_flyway_liquibase_migrations_from_comp04",
+      "run_non_destructive_git_inspection_and_staging",
+      "audit_traceability_matrix"
+    ],
+    "requireExplicitUserConfirmation": [
+      "modify_business_rules_RN001_to_RN045",
+      "alter_postgresql_enum_types_or_comp04_schema",
+      "execute_destructive_database_commands",
+      "delete_or_overwrite_official_docs"
+    ],
+    "strictlyForbidden": [
+      "implement_dian_electronic_invoicing",
+      "implement_online_payment_gateways_or_cards",
+      "implement_cash_on_delivery_or_credit",
+      "implement_waiter_or_table_service_flows",
+      "implement_whatsapp_bots_or_social_media_ordering",
+      "implement_multi_branch_operations",
+      "implement_loyalty_points_or_coupons",
+      "auto_confirm_nequi_transfers_without_manual_cashier_check",
+      "allow_cocina_role_to_mutate_order_state_or_inventory",
+      "expose_payment_amounts_or_addresses_to_cocina_role",
+      "create_monolithic_commits_or_30000_line_code_dumps"
+    ]
+  },
+  "skills": [
+    ".gemini/skills/tdd-atomic-workflow",
+    ".gemini/skills/business-rules-checker",
+    ".gemini/skills/bdd-gherkin-validator",
+    ".gemini/skills/postgres-schema-guard",
+    ".gemini/skills/ui-design-token-enforcer",
+    ".gemini/skills/traceability-auditor"
+  ]
+}
